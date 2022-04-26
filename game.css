@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  section div {
+    position: absolute;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+
+  }
+
+  
+
+
+  section div:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+  }
+
+  section div.anim {
+    animation: animate 4s infinite linear;
+  }
+
+  
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-2000%);
+    }
+  }
+
+ 
+  .control{
+      background-color: #6600ff;
+      position: relative;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  button{
+      background-color: whitesmoke;
+      width: 100px;
+      height: 50px;
+      font-size: 20px;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px;
+      transition: all ease .5s;
+  }
+
+  button:hover{
+    background-color: black;
+    
+  }
+
+  #pause{
+    
+    color: blue;
+  }
+
+  #stop{
+      color: red;
+  }
+
+  #play{
+    height: 70px;
+      color: green;
+  }
+
+  .sect:nth-child(1){
+      width: 100px;
+  }
+
+  .sect:nth-child(2){
+    width: 200px;
+    text-align: right;
+}
+
+
+ .sect3 {
+    
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    
+}
+
+.sect:nth-child(1), .sect3:nth-child(1){
+    width: 100px;
+}
+
+.left {
+ margin-left: 30px;
+}
+
+.sect2{
+height: 100%;
+}
+
+progress {
+    border-radius: 7px; 
+    width: 300px;
+    height: 22px;
+  
+ 
+  
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+  }
+  progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 7px;
+  }
+  progress::-webkit-progress-value {
+    background-color: black;
+    border-radius: 7px;
+    
+  }
+ 
